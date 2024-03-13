@@ -80,3 +80,8 @@ body {
 .convert-btn:active {
   opacity: 0.8;
 }
+
+.result {
+  margin-top: 6px;
+  text-align: center;
+}
