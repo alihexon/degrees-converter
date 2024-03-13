@@ -1,31 +1,19 @@
-const temperatureNumInput = document.querySelector('.js-temp-input')
-const temperatureInput = document.querySelector('.temperature-sel')
-const convertButton = document.querySelector('.convert-btn')
-let resultParagraph = document.querySelector('.result')
+const temperatureNumInput = document.querySelector('.js-temp-input');
+const temperatureInput = document.querySelector('.temperature-sel');
+const convertOption = document.querySelector('.option');
+const convertButton = document.querySelector('.convert-btn');
+let resultParagraph = document.querySelector('.result');
+let result;
 
-// function convertToFahrenheit(celsius) {
-//   const convertedCelsius = (celsius * 9 / 5) + 32;
-//   return convertedCelsius;
-// }
+function convertTemperature() {
+ if (convertOption.value === 'c') {
+   console.log(((temperatureNumInput.value * 9 / 5) + 32).toFixed(1));
+  } else if (convertOption.value === 'f') {
+   console.log(((temperatureNumInput.value - 32) * 5 / 9).toFixed(4));
+ }
 
-// function convertToCelsius(fahrenheit) {
-//   const convertedFahrenheit = (fahrenheit - 32) * 5 / 9;
-//   return convertedFahrenheit;
-// }
+ temperatureInput.value = '';
+ temperatureNumInput.value = '';
+}
 
-// function converTemperature(degrees, unit) {
-//   if (unit === 'c') {
-//     const convertedCelsius = (degrees * 9 / 5) + 32;
-//     return convertedCelsius;
-//   } else if (unit === 'f') {
-//     const convertedFahrenheit = (degrees - 32) * 5 / 9;
-//     return convertedFahrenheit;
-//   } else {
-//     console.log('Either the degrees or the unit if undefined')
-//   }
-// }
-
-// console.log(convertToFahrenheit(25));
-// console.log(convertToCelsius(86));
-// console.log(converTemperature(25, 'c'));
-// console.log(converTemperature(86, 'f'));
+convertButton.addEventListener('click', convertTemperature)
