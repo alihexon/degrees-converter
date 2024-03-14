@@ -55,7 +55,7 @@ body {
 
 .row select {
   font-size: 16px;
-  max-width: 100%;
+  width: 85px;
   min-width: 60px;
   background-color: transparent;
   color: rgb(25, 25, 25);
