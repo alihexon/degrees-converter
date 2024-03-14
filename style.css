@@ -27,6 +27,7 @@ body {
 
 .container h1 {
   font-size: 28px;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -84,4 +85,16 @@ body {
 .result {
   margin-top: 6px;
   text-align: center;
+}
+
+@media screen and (max-width: 381px) {
+  .container h1 {
+    font-size: 27px;
+  }
+
+  .row input,
+  .row select,
+  .convert-btn {
+    font-size: 15px;
+  }
 }
