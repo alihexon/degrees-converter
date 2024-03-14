@@ -40,6 +40,7 @@ body {
 .row input {
   font-size: 16px;
   width: 100%;
+  min-width: 100px;
   padding-left: 8px;
   color: rgb(25, 25, 25);
   border: 1px solid rgb(171, 171, 171);
@@ -54,6 +55,7 @@ body {
 
 .row select {
   font-size: 16px;
+  min-width: 105px;
   background-color: transparent;
   color: rgb(25, 25, 25);
   padding-left: 8px;
@@ -94,7 +96,20 @@ body {
 
   .row input,
   .row select,
-  .convert-btn {
+  .convert-btn,
+  .result {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container h1 {
+    font-size: 25px;
+  }
+
+  .row input,
+  .row select,
+  .convert-btn {
+    font-size: 13px;
   }
 }
