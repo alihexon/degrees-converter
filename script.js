@@ -5,13 +5,18 @@ let resultParagraph = document.querySelector('.result');
 let result;
 
 function convertTemperature() {
- if (convertOption.value === 'toC') {
+  if (temperatureNumInput.value === '') {
+    resultParagraph.innerHTML = `Please enter a valid number for temperature conversion.`
+    return
+   } else if (convertOption.value === 'toC') {
    result = (((temperatureNumInput.value - 32) * 5 / 9).toFixed(3));
    resultParagraph.innerText = `${temperatureNumInput.value} Fahrenheit is equal to ${result} Celsius`;
   } else if (convertOption.value === 'toF') {
     result = (((temperatureNumInput.value * 9 / 5) + 32).toFixed(1));
     resultParagraph.innerHTML = `${temperatureNumInput.value} Celsius is equal to ${result} Fahrenheit`;
  }
+
+
  temperatureNumInput.value = '';
 }
 
